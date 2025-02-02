@@ -5,8 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nature's Platter</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes colorChange {
+            0% { color: green; }
+            50% { color: peru; }
+            100% { color: green; }
+        }
+        .animate-text {
+            animation: colorChange 2s infinite;
+        }
+
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .animate-bg {
+            background: linear-gradient(-45deg, #4caf4f1e, #6a0dad1a, #8d44ad3f, #1abc9c5f);
+            background-size: 400% 400%;
+            animation: gradientBG 6s ease infinite;
+        }
+    </style>
 </head>
 <body class="bg-white">
+<section class="bg-gray-100 animate-bg">
 
     <!-- Header -->
     <header class="max-w-[1360px] mx-auto flex items-center justify-between py-4 px-6">
@@ -32,9 +56,9 @@
     </header>
 
     <!-- Banner -->
-    <section class="max-w-[1360px] mx-auto text-center py-16 px-6">
+    <section class="max-w-[1360px] mx-auto text-center pt-16 px-6">
         <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-            Freshness <span class="text-green-600">You Can <br> Count</span> On, Prices You’ll Love!
+            Freshness <span class="text-green-600  animate-text">You Can <br> Count</span> On, Prices You’ll Love!
         </h1>
         <p class="text-gray-600 mt-4 md:text-xl max-w-[700px] mx-auto">
             Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we’ve got you covered every day!
@@ -46,97 +70,102 @@
         </div>
     </section>
 
+</section>
         <!-- Services Section -->
-        <section class="max-w-[1360px] mx-auto py-16 px-6">
+        <section class="max-w-[1360px] mx-auto py-16 md:py-28 px-6 ">
             <h2 class="text-green-600 text-2xl font-bold mb-6">Services</h2>
             <div class="grid md:grid-cols-3 gap-6">
                 <!-- Service 1 -->
                 <div class="bg-gray-100 p-6 rounded-lg shadow">
-                    <img src="c2-assets/service.png" alt="24/7 Services" class="mx-auto mb-4 w-16 h-16">
+                    <img src="c2-assets/service.png" alt="24/7 Services" class="mx-auto mb-4 w-16 h-16 bg-white rounded-full p-1">
                     <h3 class="font-bold text-center">24/7 Services</h3>
                     <p class="text-gray-600 text-center text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
                 </div>
                 <!-- Service 2 -->
                 <div class="bg-gray-100 p-6 rounded-lg shadow">
-                    <img src="c2-assets/delivery.png" alt="Fast Delivery" class="mx-auto mb-4 w-16 h-16">
+                    <img src="c2-assets/delivery.png" alt="Fast Delivery" class="mx-auto mb-4 w-16 h-16 bg-white rounded-full p-1">
                     <h3 class="font-bold text-center">Fast Delivery</h3>
                     <p class="text-gray-600 text-center text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
                 </div>
                 <!-- Service 3 -->
                 <div class="bg-gray-100 p-6 rounded-lg shadow">
-                    <img src="c2-assets/healthy.png" alt="Healthy Products" class="mx-auto mb-4 w-16 h-16">
+                    <img src="c2-assets/healthy.png" alt="Healthy Products" class="mx-auto mb-4 w-16 h-16 bg-white rounded-full p-1">
                     <h3 class="font-bold text-center">Healthy Products</h3>
                     <p class="text-gray-600 text-center text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
                 </div>
             </div>
         </section>
     
-        <!-- Popular Products Section -->
-        <section class="max-w-[1360px] mx-auto py-16 px-6 bg-gray-100">
-            <h2 class="text-green-600 text-2xl font-bold mb-6">Popular Products</h2>
-            <div class="md:grid md:grid-cols-5 gap-6">
-                <!-- Offer Card -->
-                <div class="mb-6 md:mb-0 bg-green-500 text-white p-6 rounded-lg flex flex-col justify-between">
-                    <h3 class="text-xl font-bold">30% off</h3>
-                    <p class="text-sm">Discover a world of treats, toys, and essentials handpicked for you.</p>
-                    <button class="bg-white text-green-600 py-2 px-4 rounded mt-4">Buy Now</button>
-                    <img src="c2-assets/vegetable-offer.png" alt="Vegetable Offer" class="mt-4 w-full">
+<section class="bg-gray-100  animate-bg">
+            <!-- Popular Products Section -->
+            <section class="max-w-[1360px] mx-auto py-16 md:py-28 px-6">
+                <h2 class="text-green-600 text-2xl font-bold mb-6">Popular Products</h2>
+                <div class="md:grid md:grid-cols-5 gap-6">
+                    <!-- Offer Card -->
+                    <div class="mb-6 md:mb-0 bg-green-500 text-white p-6 rounded-lg flex flex-col justify-between">
+                        <h3 class="text-xl font-bold">30% off</h3>
+                        <p class="text-sm">Discover a world of treats, toys, and essentials handpicked for you.</p>
+                        <button class="bg-white text-green-600 py-2 px-4 rounded mt-4">Buy Now</button>
+                        <img src="c2-assets/vegetable-offer.png" alt="Vegetable Offer" class="mt-4 w-full">
+                    </div>
+                    <!-- Product Cards -->
+                    <div class="grid col-span-4 grid-cols-3 gap-4">
+                        <!-- Product 1 -->
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <img src="c2-assets/Tomatos.png" alt="Tomato 500g" class="w-16 h-16 mx-auto">
+                            <p class="text-sm text-center mt-2 font-bold">⭐ 4.5 Tomato 500 g</p>
+                            <p class="text-center text-gray-700">$39.99</p>
+                        </div>
+                        <!-- Product 2 -->
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <img src="c2-assets/Onions.png" alt="Onion 1 KG" class="w-16 h-16 mx-auto">
+                            <p class="text-sm text-center mt-2 font-bold">⭐ 4.5 Onion 1 KG</p>
+                            <p class="text-center text-gray-700">$39.99</p>
+                        </div>
+                        <!-- Product 3 -->
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <img src="c2-assets/Potatos.png" alt="Potato 1 KG" class="w-16 h-16 mx-auto">
+                            <p class="text-sm text-center mt-2 font-bold">⭐ 4.5 Potato 1 KG</p>
+                            <p class="text-center text-gray-700">$39.99</p>
+                        </div>
+                        <!-- Repeat Products -->
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <img src="c2-assets/Tomatos.png" alt="Tomato 500g" class="w-16 h-16 mx-auto">
+                            <p class="text-sm text-center mt-2 font-bold">⭐ 4.5 Tomato 500 g</p>
+                            <p class="text-center text-gray-700">$39.99</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <img src="c2-assets/Onions.png" alt="Onion 1 KG" class="w-16 h-16 mx-auto">
+                            <p class="text-sm text-center mt-2 font-bold">⭐ 4.5 Onion 1 KG</p>
+                            <p class="text-center text-gray-700">$39.99</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <img src="c2-assets/Potatos.png" alt="Potato 1 KG" class="w-16 h-16 mx-auto">
+                            <p class="text-sm text-center mt-2 font-bold">⭐ 4.5 Potato 1 KG</p>
+                            <p class="text-center text-gray-700">$39.99</p>
+                        </div>                    <!-- Repeat Products -->
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <img src="c2-assets/Tomatos.png" alt="Tomato 500g" class="w-16 h-16 mx-auto">
+                            <p class="text-sm text-center mt-2 font-bold">⭐ 4.5 Tomato 500 g</p>
+                            <p class="text-center text-gray-700">$39.99</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <img src="c2-assets/Onions.png" alt="Onion 1 KG" class="w-16 h-16 mx-auto">
+                            <p class="text-sm text-center mt-2 font-bold">⭐ 4.5 Onion 1 KG</p>
+                            <p class="text-center text-gray-700">$39.99</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <img src="c2-assets/Potatos.png" alt="Potato 1 KG" class="w-16 h-16 mx-auto">
+                            <p class="text-sm text-center mt-2 font-bold">⭐ 4.5 Potato 1 KG</p>
+                            <p class="text-center text-gray-700">$39.99</p>
+                        </div>
+                    </div>
                 </div>
-                <!-- Product Cards -->
-                <div class="grid col-span-4 grid-cols-3 gap-4">
-                    <!-- Product 1 -->
-                    <div class="bg-white p-4 rounded-lg shadow">
-                        <img src="c2-assets/Tomatos.png" alt="Tomato 500g" class="w-16 h-16 mx-auto">
-                        <p class="text-sm text-center mt-2 font-bold">⭐ 4.5 Tomato 500 g</p>
-                        <p class="text-center text-gray-700">$39.99</p>
-                    </div>
-                    <!-- Product 2 -->
-                    <div class="bg-white p-4 rounded-lg shadow">
-                        <img src="c2-assets/Onions.png" alt="Onion 1 KG" class="w-16 h-16 mx-auto">
-                        <p class="text-sm text-center mt-2 font-bold">⭐ 4.5 Onion 1 KG</p>
-                        <p class="text-center text-gray-700">$39.99</p>
-                    </div>
-                    <!-- Product 3 -->
-                    <div class="bg-white p-4 rounded-lg shadow">
-                        <img src="c2-assets/Potatos.png" alt="Potato 1 KG" class="w-16 h-16 mx-auto">
-                        <p class="text-sm text-center mt-2 font-bold">⭐ 4.5 Potato 1 KG</p>
-                        <p class="text-center text-gray-700">$39.99</p>
-                    </div>
-                    <!-- Repeat Products -->
-                    <div class="bg-white p-4 rounded-lg shadow">
-                        <img src="c2-assets/Tomatos.png" alt="Tomato 500g" class="w-16 h-16 mx-auto">
-                        <p class="text-sm text-center mt-2 font-bold">⭐ 4.5 Tomato 500 g</p>
-                        <p class="text-center text-gray-700">$39.99</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-lg shadow">
-                        <img src="c2-assets/Onions.png" alt="Onion 1 KG" class="w-16 h-16 mx-auto">
-                        <p class="text-sm text-center mt-2 font-bold">⭐ 4.5 Onion 1 KG</p>
-                        <p class="text-center text-gray-700">$39.99</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-lg shadow">
-                        <img src="c2-assets/Potatos.png" alt="Potato 1 KG" class="w-16 h-16 mx-auto">
-                        <p class="text-sm text-center mt-2 font-bold">⭐ 4.5 Potato 1 KG</p>
-                        <p class="text-center text-gray-700">$39.99</p>
-                    </div>                    <!-- Repeat Products -->
-                    <div class="bg-white p-4 rounded-lg shadow">
-                        <img src="c2-assets/Tomatos.png" alt="Tomato 500g" class="w-16 h-16 mx-auto">
-                        <p class="text-sm text-center mt-2 font-bold">⭐ 4.5 Tomato 500 g</p>
-                        <p class="text-center text-gray-700">$39.99</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-lg shadow">
-                        <img src="c2-assets/Onions.png" alt="Onion 1 KG" class="w-16 h-16 mx-auto">
-                        <p class="text-sm text-center mt-2 font-bold">⭐ 4.5 Onion 1 KG</p>
-                        <p class="text-center text-gray-700">$39.99</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-lg shadow">
-                        <img src="c2-assets/Potatos.png" alt="Potato 1 KG" class="w-16 h-16 mx-auto">
-                        <p class="text-sm text-center mt-2 font-bold">⭐ 4.5 Potato 1 KG</p>
-                        <p class="text-center text-gray-700">$39.99</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="max-w-[1360px] mx-auto p-6">
+            </section>    
+</section>
+
+
+        <div class="max-w-[1360px] mx-auto px-6 py-8 md:my-24">
             <h2 class="text-green-600 text-xl font-bold mb-4">Arrival & Offers</h2>
             
             <!-- Offers Section -->
@@ -158,40 +187,58 @@
                     <img src="c2-assets/india-gate-mock-up.png" alt="India Gate Product" class="h-28">
                 </div>
             </div>
+        </div>
          <!-- Additional Section -->
-         <section class="mb-12 max-w-[1360px] mx-auto px-6 my-6">
-            <h2 class="text-2xl font-bold text-green-600 pb-5">Why Choose Us?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-lg font-bold text-green-700">Quality Products</h3>
-                    <p class="text-gray-600">We ensure only the best quality groceries reach your doorstep.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-lg font-bold text-green-700">Affordable Prices</h3>
-                    <p class="text-gray-600">Shop your daily essentials at unbeatable prices.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-lg font-bold text-green-700">Fast & Reliable Delivery</h3>
-                    <p class="text-gray-600">Experience seamless and quick delivery to your home.</p>
-                </div>
+<section class="bg-gray-100 py-8 md:py-28  animate-bg">
+    <section class="mb-12 max-w-[1360px] mx-auto px-6 my-6">
+        <h2 class="text-2xl font-bold text-green-600 pb-5">Why Choose Us?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-bold text-green-700">Quality Products</h3>
+                <p class="text-gray-600">We ensure only the best quality groceries reach your doorstep.</p>
             </div>
-        </section>
-            <!-- Subscription Section -->
-            <div class="bg-gray-100 p-6 rounded-lg flex flex-col md:flex-row items-center justify-between">
-                <img src="c2-assets/vegetable-busket.png" alt="Vegetable Basket" class="h-40 mb-4 md:mb-0">
-                <div class="md:w-2/3">
-                    <h3 class="text-black text-lg font-bold">Get Grocery News!</h3>
-                    <p class="text-gray-600 mb-4">Exclusive training tips, tricks, product deals, and more.</p>
-                    <div class="flex items-center gap-2">
-                        <input type="email" placeholder="Enter email..." class="px-4 py-2 border rounded-md w-full md:w-auto">
-                        <button class="bg-green-600 text-white px-4 py-2 rounded-md font-semibold">Subscribe</button>
-                    </div>
-                </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-bold text-green-700">Affordable Prices</h3>
+                <p class="text-gray-600">Shop your daily essentials at unbeatable prices.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-bold text-green-700">Fast & Reliable Delivery</h3>
+                <p class="text-gray-600">Experience seamless and quick delivery to your home.</p>
             </div>
         </div>
+    </section>
+
+</section>
+
+<!-- space  -->
+<div class="space mt-64 md:mt-36 "></div>
 
         <!-- Footer Section -->
-        <footer class="bg-green-700 text-white px-6 py-24 mt-12">
+        <footer class="bg-green-700 text-white px-6 py-24 mt-12 relative">
+ <!-- Subscription Section -->
+ <div class="max-w-[1360px] mx-auto px-6 w-full top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute">
+           
+    <div class="bg-gray-100 p-6 rounded-lg flex flex-col md:flex-row items-center justify-between">
+        <div class="w-1/2 ">
+        <img src="c2-assets/vegetable-busket.png" alt="Vegetable Basket" class="h-40 mx-auto mb-4 md:mb-0">
+        </div>
+        <div class="w-full md:w-1/2 text-center md:text-left">
+            <h3 class="text-green-600 md:text-black text-lg font-bold">Get Grocery News!</h3>
+            <p class="text-gray-600 mb-4">Exclusive training tips, tricks, product deals, and more.</p>
+            <div class="flex items-center gap-2 w-full">
+                <input type="email" placeholder="Enter email..." class="px-4 py-2 border rounded-md w-11/12 mx-auto md:mx-0 mb-2">
+            </div>            
+            <div class="flex items-center justify-center md:justify-normal gap-2">
+                <button class="bg-green-600 text-white px-4 py-2 rounded-md font-semibold">Subscribe</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- space  -->
+
+        <div class="space mt-36 md:mt-20 "></div>
+
+            <!-- orginal footer  -->
             <div class="max-w-[1360px] mx-auto flex flex-col md:flex-row justify-between md:items-center gap-8">
                 <div>
                     <img src="c2-assets/logo-footer.png" alt="Nature's Platter Logo" class="mb-2">
